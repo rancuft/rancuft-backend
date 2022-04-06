@@ -1,3 +1,3 @@
 package com.dsm.rancuft.global.exception
 
-class CommonExceptionRs (val code:String, val message:String)
+class CommonExceptionRs (val code:ExceptionCode, val message:String)

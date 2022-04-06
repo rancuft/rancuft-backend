@@ -3,6 +3,6 @@ package com.dsm.rancuft.global.exception
 import org.springframework.http.HttpStatus
 
 open class CommonException (
-    code: String,
+    val code: ExceptionCode,
     val status: HttpStatus,
-) : RuntimeException(code)
+) : RuntimeException(code.message)
