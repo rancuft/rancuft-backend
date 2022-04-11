@@ -9,8 +9,8 @@ import javax.persistence.Id
 @Entity
 @Getter
 class User (
+    val name: String,
+    val password: String,
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Int,
-    val name: String,
-    val password: String)
+    val id: Int?=null)
