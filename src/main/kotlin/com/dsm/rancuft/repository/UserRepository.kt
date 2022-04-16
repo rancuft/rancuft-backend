@@ -1,9 +1,9 @@
 package com.dsm.rancuft.repository
 
 import com.dsm.rancuft.entity.User
-import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.repository.CrudRepository
 
-interface UserRepository : JpaRepository<User, Int>{
+interface UserRepository : CrudRepository<User, Int>{
     fun existsByName(name:String) : Boolean
     fun findByNameAndPassword(name:String, password:String) : User?
 }
