@@ -12,7 +12,8 @@ class Gift (
     @ManyToOne(fetch = FetchType.LAZY)
     val user: User,
     @OneToMany
-    val like: List<Like>,
+    val heart: List<Heart>,
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id : Int
     )
