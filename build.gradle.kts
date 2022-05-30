@@ -35,6 +35,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
+	compileOnly ("org.springframework.cloud:spring-cloud-starter-aws:2.0.1.RELEASE")
 }
 
 tasks.withType<KotlinCompile> {
