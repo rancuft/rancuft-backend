@@ -6,5 +6,5 @@ import javax.persistence.Embeddable
 @Embeddable
 class Image (
     @Column
-    val name: String,
+    val fileName: String,
     val url: String)
