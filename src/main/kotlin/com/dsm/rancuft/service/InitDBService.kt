@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct
 @Component
 class InitDBService(private val initDB : InitDB) {
 
-    //@PostConstruct
+//    @PostConstruct
     fun init() {
         initDB.commentInsert()
     }

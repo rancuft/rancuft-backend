@@ -16,8 +16,8 @@ class GiftController(private val giftService: GiftService) {
     @PostMapping
     fun giftGave(@AuthenticationPrincipal user: User,
                  @RequestPart("gift") files:MultipartFile,
-                 @RequestParam("comment") comment: String) {
-        giftService.giftSave(comment, files, user)
+                 @RequestParam("comment") comment: String) :String{
+        return giftService.giftSave(comment, files, user)
     }
 
     @GetMapping
