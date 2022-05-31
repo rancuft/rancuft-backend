@@ -29,6 +29,6 @@ class GiftService(private val giftRepository: GiftRepository, private val s3Imag
     }
 
     private fun randomNum(max: Long) : Int {
-        return Random.nextInt(max.toInt())
+        return Random.nextInt(1, max.toInt()+1)
     }
 }
