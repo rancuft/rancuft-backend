@@ -26,9 +26,9 @@ class JwtFilter(private val jwtUtil: JwtUtil) : OncePerRequestFilter() {
     }
 
     private fun resolveToken(request: HttpServletRequest):String? {
-        val token :String = request.getHeader("Authorization")
+        val token :String? = request.getHeader("Authorization")
 
-        if(token.startsWith("Bearer")) {
+        if(token?.startsWith("Bearer")==true) {
             return token.substring(7)
         }
         return null
