@@ -8,9 +8,11 @@ import com.dsm.rancuft.repository.GiftRepository
 import com.dsm.rancuft.repository.HeartRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class HeartService(private val heartRepository: HeartRepository, private val giftRepository: GiftRepository) {
+    @Transactional
     fun heartSave(user: User, id:Int) {
         val gift : Gift = giftRepository.findByIdOrNull(id)?:throw GiftNotFoundException()
         if(heartRepository.existsByGiftAndUser(gift, user)) {
