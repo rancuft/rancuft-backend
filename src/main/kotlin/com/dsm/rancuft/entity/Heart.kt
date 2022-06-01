@@ -11,5 +11,5 @@ class Heart (
     val user: User,
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int
+    val id: Int?=null
     )
