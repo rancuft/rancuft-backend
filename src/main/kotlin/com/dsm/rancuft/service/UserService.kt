@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service
 class UserService (private val userRepository: UserRepository, private val jwtUtil: JwtUtil){
     fun login(dto: UserCreateRequestDto): TokenResponseDto{
         val user = userRepository.findByNameAndPassword(dto.name, dto.password)?:userCreate(dto)
-        return jwtUtil.createToken(user.name, user.id)
+        return jwtUtil.createToken(user.name, user.id!!)
     }
 
     private fun userCreate(dto:UserCreateRequestDto) :User{

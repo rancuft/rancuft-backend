@@ -10,6 +10,6 @@ class Song (
     val title: String,
     val who: String, // 추천하고 싶은 사람
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int?=null,
 )
