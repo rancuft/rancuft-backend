@@ -1,4 +1,4 @@
-package com.dsm.rancuft.global.s3
+package com.dsm.rancuft.global.config
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider
 import com.amazonaws.auth.BasicAWSCredentials
