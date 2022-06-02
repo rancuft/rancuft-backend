@@ -1,15 +1,13 @@
 package com.dsm.rancuft.service
 
 import com.amazonaws.services.s3.AmazonS3
-import com.amazonaws.services.s3.AmazonS3Client
 import com.amazonaws.services.s3.model.CannedAccessControlList
 import com.amazonaws.services.s3.model.ObjectMetadata
 import com.amazonaws.services.s3.model.PutObjectRequest
-import com.dsm.rancuft.dto.Image
+import com.dsm.rancuft.entity.Image
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
-import java.io.File
 import java.io.InputStream
 import java.util.*
 
@@ -20,7 +18,7 @@ class S3ImageService (
     @Value("\${cloud.aws.s3.bucket}")
     final lateinit var bucket: String
 
-    fun uploadFile(file:MultipartFile) :Image{
+    fun uploadFile(file:MultipartFile) : Image {
         val fileName :String = createFileName(file.originalFilename!!)
 
         val objectMetadata = ObjectMetadata()

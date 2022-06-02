@@ -1,4 +1,4 @@
-package com.dsm.rancuft.dto
+package com.dsm.rancuft.entity
 
 import javax.persistence.Column
 import javax.persistence.Embeddable
